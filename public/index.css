@@ -1,99 +1,49 @@
 @import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
 
 body {
-    font-family: 'NanumSquare', sans-serif;
     margin: 0;
+    font-family: 'NanumSquare', sans-serif;
 }
 
-:root {
-    --color: rgb(81, 156, 85)
+a {
+    text-decoration: none;
+    text-emphasis: none;
+    color: black;
 }
 
-.navigation_bar {
-    text-align: center;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    border-top: 1px solid rgb(200, 200, 200);
-    background-color: var(--color);
+.signup_form_input {
+    border: 1px solid gray;
+    border-radius: 7px;
+    width: 240px;
+    padding: 8px;
+    margin: 10px;
 }
 
-.navigation_bar_img {
-    width: 38px;
-    height: 38px;
-    display: inline-block;
-    padding: 14px;
-    padding-top: 16px;
-    opacity: 0.4;
+.signup_form_input:focus {
+    border: 1px solid tomato;
 }
 
-.top_bar {
-    width: 100%;
-    height: 50px;
-    position: fixed;
-    background-color: var(--color);
-    border-bottom: 1px solid rgb(200, 200, 200);
-    z-index: 1;
+.signup_form_label {
+    margin: 10px;
 }
 
-.top_bar_img {
-    padding-top: 15px;
-    padding-left: 15px;
-    padding-right: 15px;
-    width: 20px;
-    height: 20px;
+.signup_form_btn {
+    margin: 10px;
+    margin-top: 20px;
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 5px;
+    padding: 7px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
-.top_bar_desc {
-    display: inline;
-    position: relative;
-    bottom: 3px;
-    font-size: 22px;
+.already {
+    margin: 10px;
+    margin-top: 20px;
+    font-size: 12px;
+    color: gray;
 }
 
-.nbi_4 {
-    opacity: 1;
-}
-
-.content {
-    padding-top: 50px;
-    padding-bottom: 72px;
-}
-
-.content_message {
-    transition-duration: 0.5s;
-    width: 100%;
-    height: 120px;
-    border-bottom: 1px solid gray;
-    background-color: white;
-}
-
-.content_message:hover {
-    transition-duration: 0.5s;
-    background-color: rgb(230, 230, 230);
-}
-
-.content_message:active {
-    transition-duration: 0.5s;
-    background-color: rgb(200, 200, 200)
-}
-
-.gray {
-    color: rgb(200, 200, 200);
-}
-
-.content_message_img {
-    width: 70px;
-    border-radius: 40px;
-    margin: 20px;
-    display: inline-block;
-    position: inherit;
-}
-
-.content_message_name {
-    display: inline-block;
-    position: relative;
-    bottom: 30px;
-    font-size: 20px;
-    line-height: 33px;
+input:focus {
+    outline: none;
 }

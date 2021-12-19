@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="index.css" rel="stylesheet">
+    <title>스터디헬퍼</title>
+</head>
+
+<body>
+
+    <div class="content">
+        <form action="/add" method="POST" class="signup_form" name="frm">
+            <div class="signup_form_label">아이디 (5자 이상)</div>
+            <input type="text" class="signup_form_input signup_form_id" name="id">
+            <br>
+            <div class="signup_form_label">비밀번호 (4자 이상)</div>
+            <input type="password" class="signup_form_input signup_form_pw" name="pw">
+            <br>
+            <div class="signup_form_label">사용할 이름</div>
+            <input type="password" class="signup_form_input signup_form_pw" name="nickname">
+            <br>
+            <button type="button" onclick="next_level()" class="signup_form_btn already_exist">중복 검사</button>
+            <button type="submit" class="signup_form_btn save_db">회원가입</button>
+            <div class="already">
+                <a href="/login">
+                    이미 계정이 있어요
+                </a>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.querySelector('.save_db').style.display = "none";
+
+        function next_level() {
+            document.querySelector('.already_exist').style.display = "none";
+            document.querySelector('.save_db').style.display = "inline-block";
+
+            if (frm.id.value == "" || frm.id.value.length < 4) {
+                frm.id.focus();
+                alert("규칙에 맞는 닉네임을 입력해주세요.");
+            }
+            else if (frm.password.value == "" || frm.password.value.length < 3) {
+                frm.password.focus();
+                alert("규칙에 맞는 비밀번호를 입력해주세요.");
+            }
+            else if (frm.nickname.value == "" || frm.nickname.value.length < 3) {
+                frm.nickname.focus();
+                alert("규칙에 맞는 이름을 입력해주세요.");
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
